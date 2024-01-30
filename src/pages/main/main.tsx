@@ -2,7 +2,7 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 
-import styles from "./main-page.module.css";
+import styles from "./main.module.css";
 
 interface MainPageProps {
   extraClass?: string;
@@ -22,7 +22,7 @@ export const MainPage: React.FC<MainPageProps> = ({ extraClass = "" }) => {
         </p>
       </div>
       <div className={styles.cards_box}>
-        <Link className={styles.link} to="/recursion">
+        <Link className={styles.link} to="/string">
           <div className={`${styles.card} ${styles.string}`} />
         </Link>
         <Link className={styles.link} to="/fibonacci">
