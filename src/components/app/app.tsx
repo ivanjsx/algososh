@@ -1,12 +1,13 @@
-import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { FibonacciPage } from "../../pages/fibonacci/fibonacci";
-import { ListPage } from "../../pages/list/list";
-import { MainPage } from "../../pages/main/main";
-import { QueuePage } from "../../pages/queue/queue";
-import { StringPage } from "../../pages/string/string";
-import { SortingPage } from "../../pages/sorting/sorting";
-import { StackPage } from "../../pages/stack/stack";
+import { 
+  ListPage,
+  MainPage,
+  QueuePage,
+  StackPage,
+  StringPage,
+  SortingPage,
+  FibonacciPage
+} from "../../pages";
 
 import "./app.css";
 
