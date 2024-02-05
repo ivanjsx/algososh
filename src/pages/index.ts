@@ -3,7 +3,7 @@ import { ListPage } from "./list/list";
 import { QueuePage } from "./queue/queue";
 import { StackPage } from "./stack/stack";
 import { StringPage } from "./string/string";
-import { SortingPage } from "./sort/sort";
+import { SortingPage } from "./sorting/sorting";
 import { FibonacciPage } from "./fibonacci/fibonacci";
 
 export {
