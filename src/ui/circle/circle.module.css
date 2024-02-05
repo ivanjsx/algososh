@@ -22,7 +22,7 @@
   height: 56px;
 }
 
-.letter {
+.value {
   text-transform: uppercase;
 }
 
@@ -44,11 +44,11 @@
   transform: translate(-50%);
 }
 
-.head.element {
+.above.element {
   top: -70px;
 }
 
-.head.string {
+.above.string {
   top: -30px;
 }
 
@@ -56,18 +56,18 @@
   bottom: -30px;
 }
 
-.tail30.string {
+.below30.string {
   bottom: -30px;
 }
 
-.tail60.string {
+.below60.string {
   bottom: -60px;
 }
 
-.tail30.element {
+.below30.element {
   bottom: -70px;
 }
 
-.tail60.element {
+.below60.element {
   bottom: -100px;
 }

@@ -1,24 +1,24 @@
 import React from "react";
 import styles from "./circle.module.css";
-import { ElementStates } from "../../utils/types";
+import { ElementStates } from "../../utils/constants";
 
 interface CircleProps {
   state?: ElementStates;
-  letter?: string;
-  head?: string | React.ReactElement | null;
+  value?: string;
+  above?: string | React.ReactElement | null;
   index?: number;
-  tail?: string | React.ReactElement | null;
-  tailType?: "string" | "element";
+  below?: string | React.ReactElement | null;
+  belowType?: "string" | "element";
   extraClass?: string;
   isSmall?: boolean;
 }
 
 export const Circle: React.FC<CircleProps> = ({
   state = ElementStates.Default,
-  letter,
-  head,
+  value,
+  above,
   index,
-  tail,
+  below,
   extraClass = "",
   isSmall,
 }) => {
@@ -27,11 +27,11 @@ export const Circle: React.FC<CircleProps> = ({
       <div
         className={`text text_type_input text_color_input mb-4 ${
           styles.absolute
-        } ${styles.head} ${
-          styles[typeof head === "string" ? "string" : "element"]
+        } ${styles.above} ${
+          styles[typeof above === "string" ? "string" : "element"]
         }`}
       >
-        {head}
+        {above}
       </div>
       <div
         className={`${styles.circle}  ${isSmall ? styles.small : ""} ${
@@ -39,9 +39,9 @@ export const Circle: React.FC<CircleProps> = ({
         }`}
       >
         <p
-          className={`text text_type_circle text_color_input ${styles.letter}`}
+          className={`text text_type_circle text_color_input ${styles.value}`}
         >
-          {letter}
+          {value}
         </p>
       </div>
       <p
@@ -52,11 +52,11 @@ export const Circle: React.FC<CircleProps> = ({
       <div
         className={`text text_type_input text_color_input mt-4 ${
           styles.absolute
-        } ${index?.toString() ? styles.tail60 : styles.tail30} ${
-          styles[typeof tail === "string" ? "string" : "element"]
+        } ${index?.toString() ? styles.below60 : styles.below30} ${
+          styles[typeof below === "string" ? "string" : "element"]
         }`}
       >
-        {tail}
+        {below}
       </div>
     </div>
   );

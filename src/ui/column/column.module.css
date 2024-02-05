@@ -14,10 +14,18 @@
   background-color: var(--default-color);
 }
 
+.selected {
+  background-color: var(--selected-color);
+}
+
 .changing {
   background-color: var(--changing-color);
 }
 
 .modified {
   background-color: var(--modified-color);
+}
+
+.invisible {
+  background-color: var(--invisible-color);
 }

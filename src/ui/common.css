@@ -21,8 +21,10 @@
   --bg-button-disabled: #e0e0e0;
 
   --default-color: #0032ff;
+  --selected-color: #ff0000;
   --changing-color: #d252e1;
   --modified-color: #7fe051;
+  --invisible-color: #ffffff;
 
   --common-transition: all 0.3s ease-in;
 }
