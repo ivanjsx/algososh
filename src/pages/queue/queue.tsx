@@ -1,5 +1,5 @@
 // libraries
-import { FC, FormEvent, useMemo, useState } from "react";
+import { FC, FormEvent, useCallback, useMemo, useState } from "react";
 
 // components 
 import { Button, Circle, Input, SolutionLayout } from "../../ui";
@@ -26,7 +26,7 @@ export const QueuePage: FC = () => {
   const [isInputValid, setIsInputValid] = useState(false);
   const { onChange } = useForm();
   
-  const emptyQueue = useMemo(
+  const getEmptyQueue = useCallback(
     () => Array.from(
       { length: DEFAULT_QUEUE_SIZE }, 
       () => new ElementData("")
@@ -36,7 +36,7 @@ export const QueuePage: FC = () => {
   
   const [action, setAction] = useState(QueueActions.Enqueue);
   const [isInProgress, setIsInProgress] = useState(false);
-  const [currentQueueState, setCurrentQueueState] = useState(emptyQueue);
+  const [currentQueueState, setCurrentQueueState] = useState(getEmptyQueue());
   
   const pointers = useMemo(
     () => {
@@ -63,7 +63,7 @@ export const QueuePage: FC = () => {
   
   const onReset = (event: FormEvent): void => {
     event.preventDefault();
-    setCurrentQueueState(emptyQueue);
+    setCurrentQueueState(getEmptyQueue());
   };
   
   const content = useMemo(

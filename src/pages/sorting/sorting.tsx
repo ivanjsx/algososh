@@ -5,7 +5,7 @@ import { ChangeEvent, FC, FormEvent, useCallback, useMemo, useState } from "reac
 import { Button, Column, Input, RadioInput, SolutionLayout } from "../../ui";
 
 // styles 
-import styles from "./sort.module.css";
+import styles from "./sorting.module.css";
 
 // utils
 import { ElementData } from "../../utils/element-data";
